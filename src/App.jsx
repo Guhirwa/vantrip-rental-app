@@ -15,7 +15,16 @@ const App = () => {
       </nav>
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={
+          <Home 
+            mainText = "You got the travel plans, we got travel vans."
+            text = "Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip."
+            link = {{
+              to: "vans",
+              linkText: "Find your van"
+            }}
+            />
+        } />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
