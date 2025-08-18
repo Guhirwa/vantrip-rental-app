@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './assets/components/pages/Home.jsx'
 import About from './assets/components/pages/About.jsx'
+import aboutBgImg from './assets/images/aboutBgImage.jpeg'
 
 const App = () => {
 
@@ -25,7 +26,25 @@ const App = () => {
             }}
             />
         } />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={
+          <About 
+            aboutBgImage = {{
+              src: aboutBgImg,
+              altText: "about background image"
+            }}
+            aboutPageContent = {{
+              h1Text: "Don't squeeze in a sedan when you could relax in a van.",
+              paragraphOne: "Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch. (Hitch costs extra 😉)",
+              paragraphTwo: "Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels.",
+              h2TextPart1: "Your destination is waiting, ",
+              h2TextPart2: "Your van is ready.",
+              linkTagContent: {
+                to: "/vans",
+                linkText: "Explore our vans"
+              }
+            }}
+          />
+        } />
       </Routes>
     </div>
   )
